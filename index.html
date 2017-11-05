@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <title>Vibhu Mittal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,400italic,500,700' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   </head>
   <body>
+    <script>
+      function load_profile_pic(){
+      return "images/vibhu.png";
+      }
+      </script>
     <div id="wrapper" style="width: 100%;">
       <div id="hero">
         <div class="header">
-          <img id="profpic" src="images/vibhu.png" />
+          <img id="profpic" src="" />
+	  <script> document.getElementById("profpic").src = load_profile_pic() </script>
           <h1 class="name">
               Vibhu Mittal
           </h1>
@@ -90,7 +93,7 @@
         </center>
       </div>
       <div id="footer">
-        <p>&copy; 2016 Vibhu Mittal. Site designed by <a href="http://www.gautam.cc">Gautam Mittal</a>.</p>
+        <p>Site designed by <a href="http://www.gautam.cc">Gautam Mittal</a>.</p>
       </div>
     </div><!-- end #wrapper -->
   </body>
