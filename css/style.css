@@ -78,10 +78,11 @@ html, body{ margin:0px 0px; width: 100%;}
 }
 
 #profpic {
-  border-radius: 50%;
+  border-radius: 80%;
   padding-bottom: 0;
-  width: 130px;
-  border: px solid white;
+  width: 200px;
+  height: 200px;
+  border: 2px #005E94;
 }
 
 
