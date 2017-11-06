@@ -14,7 +14,14 @@
 	  var x = Math.sin(seed++) * 10000;
 	  return x - Math.floor(x);
       }
-      function load_vibs_pic(){
+function load_pics(x){
+    if (x == "thesis"){
+	return "images/thesis.jpg",
+    }
+    if (x == "ai.book"){
+	return "images/springer.jpg",
+    }
+    
 	  var vibs_pics = ["images/1966.png",
 			   "images/1982.jpg",
 			   "images/1983.png",
@@ -42,7 +49,7 @@
       <div id="hero">
         <div class="header">
     <img id="profpic" src="" />
-    <script async> document.getElementById("profpic").src = load_vibs_pic() </script>    
+    <script async> document.getElementById("profpic").src = load_pics("vibs") </script>    
           <h1 class="name">Vibhu Mittal </h1>
           <center>
             <p class="lead">Yesterday's history. Tomorrow's a mystery. <BR>
@@ -55,7 +62,7 @@
       </div>
       <div class="content">
         <h2>Education</h2>
-        <table class="table table-striped">
+        <table>
           <tr>
             <th>Degree</th>
             <th>Year  </th>
@@ -101,7 +108,7 @@
             <td>2014 -- Present</td>
             <td>Edmodo</td>
             <td>San Mateo, CA</td>
-            <td>The largest K-12 classroom network. Raised money. Launched marketplace for educational content, advertising platform, and a machine learning based recommendation engine. Period of large international and mobile usage growth while simultaneously bringing burn rate down by almost 50%</td>
+    <td>The largest K-12 classroom network. Launched marketplace for educational content, advertising platform, and a machine learning based recommendation engine. Period of large international and mobile usage growth while bringing burn rate down by almost 50%. Recruited a new VP of Engg, VP of Product and VP of Marketing.</td>
           </tr>
           <tr>
             <td>CTO and VP Engg</td>
@@ -116,11 +123,93 @@
     <td>Root-1</td>
             <td>Palo Alto, CA</td>
             <td>A mobile language learning startup. Grew user base from nothing to almost 1 million users. Acquired by Edmodo.</td>
-          </tr>
+    </tr>
+              <tr>
+            <td>Senior Scientist</td>
+            <td>2000 -- 2009</td>
+    <td>Google</td>
+            <td>Mountain View, CA</td>
+    <td>Started the engineering mentorship program for all new engineers. Started first remote engineering office (BLR, India). Built first prototypes for Google Scholar and Google Translate. </td>
+    </tr>
+              <tr>
+            <td>Senior Scientist</td>
+            <td>2000 -- 2000</td>
+    <td>Xerox PARC</td>
+            <td>Palo Alto, CA</td>
+    <td>
+    Machine learning and statistical language processing.
+    </td>
+    </tr>
+            <tr>
+            <td>Visiting Scholar</td>
+            <td>2000 -- 2002</td>
+            <td>CSLI, Stanford</td>
+            <td>Stanford, CA</td>
+            <td>
+              Statistical language processing.
+            </td>
+            </tr>
+            <tr>
+            <td>Senior Scientist</td>
+            <td>1997 -- 2000</td>
+            <td>Just Research</td>
+            <td>Pittsburgh, PA</td>
+            <td>
+             Statistical summarization. Best short paper at SIGIR 1999: "Summarization as Machine Translation" with Michael Witbrock.
+            </td>
+            </tr>
+            <tr>
+            <td>Adjunct Faculty</td>
+            <td>1997 -- 2003</td>
+    <td>Language Technology Institute, School of Computer Science, Carnegie Mellon University</td>
+            <td>Pittsburgh, PA</td>
+            <td>
+    Ph.D committee member.
+            </td>
+            </tr>
+            <tr>
+            <td>Research Associate</td>
+            <td>1993 -- 1997</td>
+    <td>Learning Research and Development Center, University of Pittsburgh</td>
+            <td>Pittsburgh, PA</td>
+            <td>
+    Projects: MIGRAINE (Patient education) and SAGE (automatic graphical explanations)
+            </td>
+    </tr>
     </table>
     </div>
       <div class="content">
-        <h2>Publications: Books</h2>
+    <h2>Publications: Books</h2>
+        <table>
+          <tr>
+            <th>Cover</th>
+            <th>Details  </th>
+          </tr>
+    <tr>
+    <td>
+    <img id="book1" src="" />
+    <script async> document.getElementById("book1").src = load_pics("thesis") </script>
+    ISBN-13: 978-0805824155<br>
+ISBN-10: 0805824154
+    </td>
+    <td>
+Generating Natural Language Descriptions With Integrated Text and Examples. Pyschology Press. 1998. <BR> This book discusses issues in generating coherent, effective natural language descriptions with integrated text and examples. This is done in the context of a system for generating documentation dynamically from the underlying software representations.
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <img id="book2" src="" />
+    <script async> document.getElementById("book2").src = load_pics("ai.book") </script>
+    ISBN-13: 978-3540647904<br>
+ISBN-10: 3540647902
+    </td>
+    <td>
+Assistive Technology and Artificial Intelligence: Applications in Robotics, User Interfaces and Natural Language Processing. Springer Verlag. <BR> 
+The book is devoted to the advancement and use of AI to help users extend their current range of cognitive and sensory abilities or overcome their motor disabilities. Chapters in this book address topics in assistive technologies from natural language processing, planning, robotics, user interface design, computer vision, and learning.
+    </td>
+    </tr>
+
+</table>
     </div>
       <div class="content">
         <h2>Publications: Patents</h2>
