@@ -7,16 +7,38 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <script>
-      function load_profile_pic(){
-      return "images/vibhu.png";
+    <script async>
+      function getRandom(){
+	  var today = new Date();
+	  var seed = today.getSeconds();
+	  var x = Math.sin(seed++) * 10000;
+	  return x - Math.floor(x);
       }
-      </script>
+      function load_vibs_pic(){
+	  var vibs_pics = ["images/1966.png",
+			   "images/1983.png",
+			   "images/1984.png",
+			   "images/1986.png",
+			   "images/2000.jpg",
+			   "images/2003.png",
+			   "images/2007.png",
+			   "images/2007-2.png", 			   			   
+			   "images/2008.png",
+			   "images/2009.png",			   
+			   "images/2011.png"
+			   "images/2011-2.png"			   
+			   "images/2012.png",
+			   "images/2014.jpg",
+			   "images/2016.jpg",
+			  ];
+	  return vibs_pics[Math.floor(getRandom()*vibs_pics.length)];
+      }
+</script>
     <div id="wrapper" style="width: 100%;">
       <div id="hero">
         <div class="header">
           <img id="profpic" src="" />
-	  <script> document.getElementById("profpic").src = load_profile_pic() </script>
+	  <script> document.getElementById("profpic").src = load_vibs_pic() </script>
           <h1 class="name">
               Vibhu Mittal
           </h1>
