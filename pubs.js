@@ -1,76 +1,109 @@
 
-Jade Goldstein, Vibhu O. Mittal, Jaime Carbonell, and Jamie Callan.
-\newblock {A Statistical Approach to Multi-Document Summarization}.
-\newblock In {Proceedings of the Ninth International Conference on
-  Information and Knowledge Management (CIKM-2000)}, Washington, DC, November
-  2000. ACM.
-\newblock (To appear).
+
+var pub1 = {
+    authors:"Jade Goldstein, Vibhu O. Mittal, Jaime Carbonell, and Jamie Callan",
+    title:"A Statistical Approach to Multi-Document Summarization",
+    conference:"In Proceedings of the Ninth International Conference on Information and Knowledge Management (CIKM-2000)",
+    loc:"Washington, DC",
+    year:"2000",
+    org:"ACM",
+};
+
+var pub2 = {
+    authors:"Adam Berger and Vibhu O. Mittal",
+    title:"Learning to summarize using FAQs",
+    conference:"Proceedings of the 38th Annual Meeting of the Association for Computational Linguistics (ACL-2000)",
+    loc:"Hong Kong",
+    year:"2000",
+    org:"ACL",
+};
+
+var pub3 = {
+    authors:"Michele Banko, Vibhu Mittal, and Michael Witbrock",
+    title:"Natural Language Summarization as Statistical Translation",
+    conference:"Proceedings of the 38th Annual Meeting of the Association for Computational Linguistics (ACL-2000)",
+    loc:"Hong Kong",
+    year:"2000",
+    org:"ACL",
+};
+
+var pub4 = {
+    authors:"Mark Kantrowitz, Behrang Mohit, and Vibhu Mittal",
+    title:"The Impact of Stemming on IR Performance",
+    conference:"Proceedings of the twenty-third annual International ACM  SIGIR Conference on Research and Development in Information Retrieval",
+    loc:"Athens, Greece",
+    year:"2000",
+    org:"ACM",
+};
 
 
-Adam Berger and Vibhu O. Mittal.
-\newblock {Learning to summarize using FAQs}.
-\newblock In {Proceedings of the 38th Annual Meeting of the Association for
-  Computational Linguistics (ACL-2000)}, Hong Kong, October 2000. ACL.
-\newblock (To apppear).
+var pub5 = {
+    authors:"Vibhu Mittal, Adam Berger, and Michael Witbrock",
+    title:"OCELOT: A System for Summarizing Web Pages",
+    conference:"Proceedings of the twenty-third annual International ACM  SIGIR Conference on Research and Development in Information Retrieval",
+    loc:"Athens, Greece",
+    year:"2000",
+    org:"ACM",
+};
 
 
-Michele Banko, Vibhu Mittal, and Michael Witbrock.
-\newblock {Natural Language Summarization as Statistical Translation}.
-\newblock In {Proceedings of the 38th Annual Meeting of the Association for
-  Computational Linguistics (ACL-2000)}, Hong Kong, October 2000. ACL.
-\newblock (To apppear).
+
+var pub6 = {
+    authors:"Shumeet Baluja, Vibhu Mittal, and Rahul Sukthankar",
+    title:"Applying Machine Learning for High Performance Named-Entity Extraction",
+    conference:"Proceedings of PacLing-99: The Pacific Rim Conference on Computational Linguistics",
+    loc:"Waterloo, Canada",
+    year:"1999",
+};
 
 
-Mark Kantrowitz, Behrang Mohit, and Vibhu Mittal.
-\newblock {The Impact of Stemming on IR Performance}.
-\newblock In {Proceedings of the twenty-third annual International ACM
-  SIGIR Conference on Research and Development in Information Retrieval}, pages
-  357--359, Athens, Greece, 2000.
+var pub7 = {
+    authors:"Michele Banko, Vibhu Mittal, Mark Kantrowitz, and Jade Goldstein",
+    title:"Text Span Alignment for Creating Summarization Corpora",
+    conference:"Proceedings of PacLing-99: The Pacific Rim Conference on Computational Linguistics",
+    loc:"Waterloo, Canada",
+    year:"1999",
+};
+
+var pub8 = {
+    authors:"Jade Goldstein, Mark Kantrowitz, Vibhu O. Mittal, and Jaime Carbonell",
+    title:"Summarizing Text Documents: Sentence Selection and Evaluation  Metrics",
+    conference:"Proceedings of the 22nd Annual International ACM  SIGIR Conference on Research and Development in Information Retrieval",
+    loc:"Berkeley, CA",
+    year:"1999",
+    org:"ACM",
+};
 
 
-Vibhu Mittal, Adam Berger, and Michael Witbrock.
-\newblock {OCELOT: A System for Summarizing Web Pages}.
-\newblock In {Proceedings of the twenty-third annual International ACM
-  SIGIR Conference on Research and Development in Information Retrieval}, pages
-  144--151, Athens, Greece, 2000.
+var pub9 = {
+    authors:"Michael Witbrock and Vibhu O. Mittal",
+    title:"Headline Generation: A Framework for Generating Highly-Condensed Non-Extractive Summaries",
+    conference:"Best late-breaking paper award: Proceedings of the 22nd Annual International ACM  SIGIR Conference on Research and Development in Information Retrieval",
+    loc:"Berkeley, CA",
+    year:"1999",
+    org:"ACM",
+};
 
 
-Adam Berger, Richard Caruana, David Cohn, Dayne Freitag, and Vibhu O. Mittal.
-\newblock {Bridging the Lexical Chasm: Statistical Approaches to
-  Answer-Finding}.
-\newblock In {Proceedings of the twenty-third annual International ACM
-  SIGIR Conference on Research and Development in Information Retrieval}, pages
-  192--199, Athens, Greece, 2000.
+var publications = [pub1, pub2, pub3, pub4, pub5, pub6, pub7, pub8, pub9];
+
+function print_pubs(){
+    for (var i = 0; i < publications.length; i++){
+	var auth  = publications[i].authors;
+	var title = publications[i].title;
+	var conf  = publications[i].conference;
+	var loc   = publications[i].loc;
+	var year  = publications[i].year;
+	var org   = publications[i].org;	
+
+    }
+}
 
 
-Shumeet Baluja, Vibhu Mittal, and Rahul Sukthankar.
-\newblock {Applying Machine Learning for High Performance Named-Entity
-  Extraction}.
-\newblock In {Proceedings of PacLing-99: The Pacific Rim Conference on
-  Computational Linguistics}, pages 365--378, Waterloo, Canada, 1999.
+print_pubs();
 
 
-Michele Banko, Vibhu Mittal, Mark Kantrowitz, and Jade Goldstein.
-\newblock {Text Span Alignment for Creating Summarization Corpora}.
-\newblock In {Proceedings of PacLing-99: The Pacific Rim Conference on
-  Computational Linguistics}, pages 276--282, Waterloo, Canada, 1999.
-
-
-Jade Goldstein, Mark Kantrowitz, Vibhu O. Mittal, and Jaime Carbonell.
-\newblock {Summarizing Text Documents: Sentence Selection and Evaluation
-  Metrics}.
-\newblock In {Proceedings of the 22nd International ACM SIGIR Conference on
-  Research and Development in Information Retrieval (SIGIR-99)}, pages
-  121--128, Berkeley, CA., 1999.
-
-
-Michael Witbrock and Vibhu O. Mittal.
-\newblock {Headline Generation: {A} Framework for Generating
-  Highly-Condensed Non-Extractive Summaries}.
-\newblock In {Proceedings of the 22nd International ACM SIGIR Conference on
-  Research and Development in Information Retrieval (SIGIR-99)}, pages
-  315--316, Berkeley, CA, 1999.
-\newblock {\underline{(Best late-breaking paper/poster award.)}.
+/*
 
 
 Vibhu O. Mittal, Mark Kantrowitz, Jade Goldstein, and Jaime Carbonell.
@@ -276,3 +309,4 @@ Vibhu O. Mittal and Mukesh Singhal.
   TX), July 1989.
 
 
+*/
