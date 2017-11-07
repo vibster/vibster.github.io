@@ -8,4 +8,8 @@ First screen should be photo. Second screen should be all of resume (so variable
 
 Each visit should reflect what has changed. Track clicks and build interest profile
 
+Images and hyperlinks for everything: papers, books, university images
+
+onLoad events to determine what kind of device it is
+
 
