@@ -87,40 +87,24 @@ var pub9 = {
 };
 
 
-var publications = [pub1, pub2, pub3, pub4, pub5, pub6, pub7, pub8, pub9];
+var pub10 = {
+    authors:"Vibhu O. Mittal, Mark Kantrowitz, Jade Goldstein, and Jaime Carbonell",
+    title:"Selecting Text Spans for Document Summaries: Heuristics and  Metrics",
+    conference:"Proceedings of the Sixteenth National Conference on  Artificial Intelligence (AAAI-99)",
+    loc:"Orlando, FL",
+    year:"1999",
+    org:"AAAI",
+};
 
-function Pubs_tableCreate(){
-    var papers_div = document.getElementById("papersDiv"),
-        tbl  = document.createElement('table');
+var pub11 = {
+    authors:"Vibhu O. Mittal",
+    title:"Visual Prompts and Graphical Design: A Framework for Exploring the Design Space of 2-D Charts and Graphs",
+    conference:"Proceedings of the Fourteenth National Conference on  Artificial Intelligence (AAAI-97)",
+    loc:"Providence, RI",
+    year:"1997",
+    org:"AAAI",
+};
 
-    for(var i = 0; i < publications.length; i++){
-        var tr = tbl.insertRow();
-	var title = publications[i].title;
-	var auth  = publications[i].authors;	
-	var conf  = publications[i].conference;
-	var loc   = publications[i].loc;
-	var year  = publications[i].year;
-	var org   = publications[i].org;	
-        var td = tr.insertCell();
-        td.appendChild(document.createTextNode(i + 1 + "."));
-        td = tr.insertCell();	
-        td.appendChild(document.createTextNode(title));	
-        td = tr.insertCell();
-        td.appendChild(document.createTextNode(auth));	
-        td = tr.insertCell();
-        td.appendChild(document.createTextNode(conf));	
-        td = tr.insertCell();
-        td.appendChild(document.createTextNode(loc));	
-        td = tr.insertCell();
-        td.appendChild(document.createTextNode(year));	
-        td = tr.insertCell();
-        td.appendChild(document.createTextNode(org));	
-    }
-    papers_div.appendChild(tbl);
-}
-
-
-Pubs_tableCreate();
 
 
 
@@ -128,20 +112,7 @@ Pubs_tableCreate();
 /*
 
 
-Vibhu O. Mittal, Mark Kantrowitz, Jade Goldstein, and Jaime Carbonell.
-\newblock {Selecting Text Spans for Document Summaries: Heuristics and
-  Metrics}.
-\newblock In {Proceedings of the Sixteenth National Conference on
-  Artificial Intelligence (AAAI-99)}, pages 467--473, Orlando, FL, July 1999.
-  AAAI.
 
-
-Vibhu O. Mittal.
-\newblock {Visual Prompts and Graphical Design: A Framework for Exploring
-  the Design Space of 2-D Charts and Graphs}.
-\newblock In {Proceedings of the Fourteenth National Conference on
-  Artifical Intelligence (AAAI 97)}, pages 57--63, Providence, RI, June 1997.
-  AAAI.
 
 
 Vibhu O. Mittal, Bruce G. Buchanan, Johanna D. Moore, and Giuseppe Carenini.
@@ -332,3 +303,40 @@ Vibhu O. Mittal and Mukesh Singhal.
 
 
 */
+
+
+var publications = [pub1, pub2, pub3, pub4, pub5, pub6, pub7, pub8, pub9, pub10, pub11];
+
+function Pubs_tableCreate(){
+    var papers_div = document.getElementById("papersDiv"),
+        tbl  = document.createElement('table');
+
+    for(var i = 0; i < publications.length; i++){
+        var tr = tbl.insertRow();
+	var title = publications[i].title;
+	var auth  = publications[i].authors;	
+	var conf  = publications[i].conference;
+	var loc   = publications[i].loc;
+	var year  = publications[i].year;
+	var org   = publications[i].org;	
+        var td = tr.insertCell();
+        td.appendChild(document.createTextNode(i + 1 + "."));
+        td = tr.insertCell();	
+        td.appendChild(document.createTextNode(title));	
+        td = tr.insertCell();
+        td.appendChild(document.createTextNode(auth));	
+        td = tr.insertCell();
+        td.appendChild(document.createTextNode(conf));	
+        td = tr.insertCell();
+        td.appendChild(document.createTextNode(loc));	
+        td = tr.insertCell();
+        td.appendChild(document.createTextNode(year));	
+        td = tr.insertCell();
+        td.appendChild(document.createTextNode(org));	
+    }
+    papers_div.appendChild(tbl);
+}
+
+
+Pubs_tableCreate();
+
