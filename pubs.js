@@ -54,6 +54,7 @@ var pub6 = {
     conference:"Proceedings of PacLing-99: The Pacific Rim Conference on Computational Linguistics",
     loc:"Waterloo, Canada",
     year:"1999",
+    org:""    
 };
 
 
@@ -63,6 +64,7 @@ var pub7 = {
     conference:"Proceedings of PacLing-99: The Pacific Rim Conference on Computational Linguistics",
     loc:"Waterloo, Canada",
     year:"1999",
+    org:""
 };
 
 var pub8 = {
@@ -87,20 +89,40 @@ var pub9 = {
 
 var publications = [pub1, pub2, pub3, pub4, pub5, pub6, pub7, pub8, pub9];
 
-function print_pubs(){
-    for (var i = 0; i < publications.length; i++){
-	var auth  = publications[i].authors;
+function Pubs_tableCreate(){
+    var papers_div = document.getElementById("papersDiv"),
+        tbl  = document.createElement('table');
+
+    for(var i = 0; i < publications.length; i++){
+        var tr = tbl.insertRow();
 	var title = publications[i].title;
+	var auth  = publications[i].authors;	
 	var conf  = publications[i].conference;
 	var loc   = publications[i].loc;
 	var year  = publications[i].year;
 	var org   = publications[i].org;	
-
+        var td = tr.insertCell();
+        td.appendChild(document.createTextNode(i + 1 + "."));
+        td = tr.insertCell();	
+        td.appendChild(document.createTextNode(title));	
+        td = tr.insertCell();
+        td.appendChild(document.createTextNode(auth));	
+        td = tr.insertCell();
+        td.appendChild(document.createTextNode(conf));	
+        td = tr.insertCell();
+        td.appendChild(document.createTextNode(loc));	
+        td = tr.insertCell();
+        td.appendChild(document.createTextNode(year));	
+        td = tr.insertCell();
+        td.appendChild(document.createTextNode(org));	
     }
+    papers_div.appendChild(tbl);
 }
 
 
-print_pubs();
+Pubs_tableCreate();
+
+
 
 
 /*
