@@ -7,63 +7,16 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <script async>
-      function getRandom(){
-	  var today = new Date();
-	  var seed = today.getSeconds();
-	  var x = Math.sin(seed++) * 10000;
-	  return x - Math.floor(x);
-      }
-function load_pics(x){
-    if (x == "thesis"){
-	return "images/thesis.jpg";
-    }
-    if (x == "ai.book"){
-	return "images/springer.jpg";
-    }
-    
-	  var vibs_pics = ["images/1966.png",
-			   "images/1982.jpg",
-			   "images/1983.png",
-			   "images/1984.png",
-			   "images/1986.png",
-			   "images/2000.jpg",
-			   "images/2003.png",
-			   "images/2007.png",
-			   "images/2007-2.png", 			   			   
-			   "images/2008.png",
-      			   "images/2008a.png",
-			   "images/2008.Jun.jpg",
-			   "images/2009.png",
-			   "images/2009a.png",
-      			   "images/2009b.png",      
-			   "images/2010a.png",
-			   "images/2011.png",
-			   "images/2011a.png",      
-			   "images/2011-2.png",
-			   "images/2012.png",
-			   "images/2012a.png",      
-			   "images/2014.jpg",
-			   "images/2016.jpg",
-			  ];
-    // return vibs_pics[Math.floor(getRandom()*vibs_pics.length)];
-    return "images/1966.png";
-}
-</script>
-
     <div id="wrapper" style="width: 100%;">
+      
       <div id="hero">
         <div class="header">
-	  <img id="profpic" src="" />
-	  <script async> document.getElementById("profpic").src = load_pics("vibs") </script>    
-          <h1 class="name">Vibhu Mittal </h1>
-          <center>
-            <p class="lead">Yesterday's history. Tomorrow's a
-            mystery. <BR> But today is a gift. <BR>
-          </center>
+	  <div id="pic-name-quote"></div>
         </div>
-      </div>
-
+	</div>
+    
+      <script src="intro_pic.js">
+	
       <div class="content">
         <h2>Experience</h2>
         <table>
@@ -159,9 +112,9 @@ function load_pics(x){
     <tr>
     <td>
     <img id="book1" src="" width=200px/>
-    <script async> document.getElementById("book1").src = load_pics("thesis") </script>
+    <script> document.getElementById("book1").src = load_pics("thesis") </script>
     ISBN-13: 978-0805824155<br>
-ISBN-10: 0805824154
+    ISBN-10: 0805824154
     </td>
     <td>
 <div class="lead">Generating Natural Language Descriptions With Integrated Text and Examples</div> Pyschology Press. 1998. <br><BR> This book discusses issues in generating coherent, effective natural language descriptions with integrated text and examples. The context is a system for generating textbooks of varying levels of background knowledge -- from introductory to expert -- in the case of the programming language Lisp.
@@ -506,7 +459,6 @@ July 7, 2005
       <div class="content">
         <h2>Papers</h2>
 	<div id="papersDiv" style="width: 100%;"></div>	
-	<script src="pubs.js" async></script>
       </div>
 
       <div class="content">
@@ -571,6 +523,12 @@ July 7, 2005
       </div>
     </div><!-- end #wrapper -->
 
-    
+<script>
+window.onload = function() {
+    var element = document.createElement("script");
+    element.src = "pubs.js";
+    document.body.appendChild(element);
+};
+</script>    
   </body>
 </html>
