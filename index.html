@@ -12,6 +12,18 @@
             box-sizing: border-box
         }
 
+        @font-face {
+            font-family: "Deepmind Serif";
+            font-weight: 700;
+            src: url('assets/fonts/DeepMindSerif-Bold.ttf') format("ttf")
+        }
+
+        @font-face {
+            font-family: "Deepmind Serif";
+            font-weight: 400;
+            src: url('assets/fonts/DeepMindSerif-Display.ttf') format("ttf")
+        }
+
         html {
             margin: 0;
             padding: 0;
@@ -29,7 +41,7 @@
             margin: 0;
             -webkit-font-smoothing: antialiased;
             -webkit-text-size-adjust: 100%;
-            max-width: 720px;
+            max-width: 900px;
             margin: 0 auto
         }
 
@@ -47,7 +59,8 @@
         h6 {
             margin-bottom: 1rem;
             line-height: 1.25;
-            color: #313131
+            color: #313131;
+            font-family: 'Deepmind Serif';
         }
 
         h1 {
@@ -115,15 +128,54 @@
             word-wrap: break-word
         }
 
-        @media (min-width: 30em) {
-            .row {
-                width: 100%;
-                display: table;
-                table-layout: fixed;
+        .archive {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-gap: 1em;
+            grid-auto-flow: dense;
+        }
+
+        .article {
+            padding: 1em;
+            background: #fff;
+            box-shadow:
+                0 5px 10px rgba(0, 0, 0, 0.1),
+                0 20px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .article:nth-child(1) {
+            grid-column: 1 / -1;
+            background: rgba(200, 200, 255, 0.3)
+        }
+
+        .article:nth-child(8) {
+            grid-column: -3 / -1;
+            background: rgba(255, 200, 255, 0.3)
+        }
+
+        .article:nth-child(12) {
+            grid-column: 1 / -2;
+            background: rgba(255, 200, 255, 0.3)
+        }
+
+        .article:nth-child(12)>hr:first-child {
+            padding-bottom: 30%
+        }
+
+        .article:after {
+            color: #808;
+            font-weight: bold;
+            font-family: courier;
+        }
+
+        @media (max-width: 680px) {
+            .archive {
+                display: flex;
+                flex-direction: column;
             }
 
-            .col {
-                display: table-cell;
+            .article {
+                margin-bottom: 1em;
             }
         }
     </style>
@@ -131,38 +183,112 @@
 
 <body>
 
-    <h1>Hello</h1>
-    <div class="row">
-        <div class="col">
-            <div class="row">
-                <div class="col">
-                    <p>Lorem Ispum is a choke artist. It chokes! Lorem Ipsum better hope that there are no "tapes" of our conversations before he starts leaking to the press! An ‘extremely credible source’ has called my office and told me that Barack Obama’s placeholder text is a fraud. You know, it really doesn’t matter what you write as long as you’ve got a young, and beautiful, piece of text.</p>
-                </div>
-            </div>
-            <div class="row">
-                <p>My placeholder text, I think, is going to end up being very good with women. Look at these words. Are they small words? And he referred to my words - if they're small, something else must be small. I guarantee you there's no problem, I guarantee. When other websites give you text, they’re not sending the best. They’re not sending you, they’re sending words that have lots of problems and they’re bringing those problems with us. They’re bringing mistakes. They’re bringing misspellings. They’re typists… And some, I assume, are good words. Lorem Ipsum better hope that there are no "tapes" of our conversations before he starts leaking to the press!</p>
-            </div>
-        </div>
-        <div class="col">
-            <p>Trump Ipsum is calling for a total and complete shutdown of Muslim text entering your website. My placeholder text, I think, is going to end up being very good with women. The best taco bowls are made in Trump Tower Grill. I love Hispanics! Look at these words. Are they small words? And he referred to my words - if they're small, something else must be small. I guarantee you there's no problem, I guarantee.</p>
-            <img src="https://www.fillmurray.com/640/360" />
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <p>Lorem Ispum is a choke artist. It chokes! Lorem Ipsum better hope that there are no "tapes" of our conversations before he starts leaking to the press! An ‘extremely credible source’ has called my office and told me that Barack Obama’s placeholder text is a fraud. You know, it really doesn’t matter what you write as long as you’ve got a young, and beautiful, piece of text.</p>
+    <h1>patagonia</h1>
+    
+    <div class="archive">
+        <article class="article">
+            <h3>Research</h3>
+            <p>
+                Lorem Ipsum is the single greatest threat. We are not - we are not keeping up with other websites. The concept of Lorem Ipsum was created by and for the Chinese in order to make U.S. design jobs non-competitive. Lorem Ipsum is the single greatest threat. We are not - we are not keeping up with other websites. The best taco bowls are made in Trump Tower Grill. I love Hispanics! Lorem Ispum is a choke artist. It chokes!
+            </p>
+            <p>
+                Look at these words. Are they small words? And he referred to my words - if they're small, something else must be small. I guarantee you there's no problem, I guarantee. You could see there was text coming out of her eyes, text coming out of her wherever.
+            </p>
+            <p>
+                I’m the best thing that ever happened to placeholder text. The other thing with Lorem Ipsum is that you have to take out its family. I know words. I have the best words.
+            </p>
+        </article>
+        <article class="article">
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+        </article>
+        <article class="article">3
+          <hr>
+          <hr>
+          <hr>
+        </article>
+        <article class="article">4
+          <hr class="image"><hr>
+          <hr>
+          <hr>
+          <hr>
+          <hr>
+          <hr>
+        </article>
+        <article class="article">5
+          <hr>
+          <hr>
+          <hr>
+        </article>
+        <article class="article">6
+          <hr>
+          <hr>
+          <hr>
+        </article>
+        <article class="article">7
+          <hr>
+          <hr>
+          <hr>
+        </article>
+        <article class="article">8
+          <hr>
+          <hr>
+        </article>
+        <article class="article">9
+          <hr>
+          <hr>
+          <hr>
+        </article>
+        <article class="article">10
+          <hr>
+          <hr>
+        </article>
+        <article class="article">11
+          <hr>
+          <hr>
+          <hr>
+        </article>
+        <article class="article">12
+          <hr class="image"><hr>
+          <hr>
+          <hr>
+        </article>
+        <article class="article">13
+          <hr class="image"><hr>
+          <hr>
+        </article>
+        <article class="article">14
+          <hr>
+          <hr>
+          <hr>
+          <hr>
+          <hr>
+          <hr>
+          <hr>
+          <hr>
+          <hr>
+        </article>
+        <article class="article">15
+          <hr class="image">
+          <hr>
+          <hr>
+          <hr>
+          <hr>
+        </article>
+        <article class="article">16
+          <hr>
+          <hr>
+          <hr>
+          <hr>
+          <hr>
+          <hr>
+        </article>
+        <article class="article">17<hr>
+          <hr>
+          <hr></article>
+      </div>
 
-            <p>My placeholder text, I think, is going to end up being very good with women. Look at these words. Are they small words? And he referred to my words - if they're small, something else must be small. I guarantee you there's no problem, I guarantee. When other websites give you text, they’re not sending the best. They’re not sending you, they’re sending words that have lots of problems and they’re bringing those problems with us. They’re bringing mistakes. They’re bringing misspellings. They’re typists… And some, I assume, are good words. Lorem Ipsum better hope that there are no "tapes" of our conversations before he starts leaking to the press!</p>
-        </div>
-        <div class="col">
-            <div class="row">
-                <p>Trump Ipsum is calling for a total and complete shutdown of Muslim text entering your website. My placeholder text, I think, is going to end up being very good with women. The best taco bowls are made in Trump Tower Grill. I love Hispanics! Look at these words. Are they small words? And he referred to my words - if they're small, something else must be small. I guarantee you there's no problem, I guarantee.</p>
-            </div>
-            <div class="row">
-                <img src="https://www.fillmurray.com/640/360" />
-            </div>
-        </div>
-    </div>
+
+    <hr />
 
 
     <script type="text/javascript">
